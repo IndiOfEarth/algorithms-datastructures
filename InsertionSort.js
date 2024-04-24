@@ -40,7 +40,7 @@ function shift(array, index1, index2) {
 }
 
 function insertionSort(array) {    
-    // 1. Loop through each element in the array, starting from the second element (insertion sort always starts here)
+    // 1. Loop through each element in the array
     for (var i = 0; i <= array.length; i++) {
         var j = i; // 2. Initialise a variable to track the position to insert the current element. Increase by 1 for each iteration
 
