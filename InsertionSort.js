@@ -39,9 +39,7 @@ function shift(array, index1, index2) {
 	return array; // 5. return updated array
 }
 
-function insertionSort(array) {
-    var a;
-    
+function insertionSort(array) {    
     // 1. Loop through each element in the array, starting from the second element (insertion sort always starts here)
     for (var i = 0; i <= array.length; i++) {
         var j = i; // 2. Initialise a variable to track the position to insert the current element. Increase by 1 for each iteration
@@ -49,11 +47,11 @@ function insertionSort(array) {
         // 3. loop continues whilst the value of array[j] (value we want to move) is smaller than previous value
         // - loop shifts elements to the right until the correct position for array[j] is found
         while (j > 0 && (array[j] < array[j-1])) {
-            a = shift(array, j, j-1); // 4. shift will swap the two values and also move the others
+            shift(array, j, j-1); // 4. shift will swap the two values and also move the others
             j--; // 5. decrement j - will stop once it finds a value bigger 
         }   
     }
-    return a;
+    return array;
 }
 
 // This will generate a random array with 12 elements, print it to the console, and also print what is returned by insertionSort also to the console
